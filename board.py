@@ -7,43 +7,51 @@ class TicTacToe:
         self.current_winner = None
 
     def print_board(self):
+        # Print the board
         for row in [self.board[i*3:(i+1)*3] for i in range(3)]:
             print('| ' + ' | '.join(row) + ' |')
 
     def available_moves(self):
+        # print out the index of the available moves
         return [i for i, x in enumerate(self.board) if x == ' ']
 
     def make_move(self, square, letter):
         if self.board[square] == ' ':
-            self.board[square] = letter
-            if self.winner(square, letter):
-                self.current_winner = letter
-            return True
-        return False
+            self.board[square] = letter # make the move
+            if self.winner(square, letter): # check if the move is a winning move
+                self.current_winner = letter # update the winner   
+            return True # return True if the move is valid
+        return False # return False if the move is invalid
 
     def winner(self, square, letter):
         # Check the row
-        row_ind = square // 3
-        row = self.board[row_ind*3:(row_ind+1)*3]
+        row_ind = square // 3 # first row is 0, second row is 1, third row is 2
+        row = self.board[row_ind*3:(row_ind+1)*3] # get the row, e.g. [0, 1, 2], [3, 4, 5], [6, 7, 8]
         if all([s == letter for s in row]):
             return True
 
         # Check the column
-        col_ind = square % 3
-        column = [self.board[col_ind+i*3] for i in range(3)]
+        col_ind = square % 3 # first column is 0, second column is 1, third column is 2
+        column = [self.board[col_ind+i*3] for i in range(3)] # get the column, e.g. [0, 3, 6], [1, 4, 7], [2, 5, 8]
         if all([s == letter for s in column]):
             return True
 
         # Check diagonals
-        if square % 2 == 0:
+        if square % 2 == 0: # check 0 4 8 or 2 4 6
             diagonal1 = [self.board[i] for i in [0, 4, 8]]
             if all([s == letter for s in diagonal1]):
                 return True
             diagonal2 = [self.board[i] for i in [2, 4, 6]]
             if all([s == letter for s in diagonal2]):
                 return True
-
         return False
+
+    def gameover(self, letter):
+        return self.winner(letter) or self.tie()
+
+    def tie(self):
+        # all the spaces are filled
+        return all([s != ' ' for s in self.board])
 
     def reset(self):
         self.board = [' ' for _ in range(9)]
