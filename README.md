@@ -1,6 +1,6 @@
 # Reinforcement Learning Fundamentals Repository
 
-Welcome to the GitHub repository for the Reinforcement Learning Fundamentals coursework. In the first part, we develop a Tic-Tac-Toe agent using the Temporal Difference (TD) learning algorithm. This agent is trained to compete against several types of opponents: a random player, a winning-move player (who plays randomly unless a winning move is immediately available), and the ThandPlayer (who plays to win or block the opponent's winning move). In the second part, we explore the concept of exploration vs. exploitation in reinforcement learning by implementing a 10-armed bandit problem. We compare the performance of greedy and epsilon-greedy strategies, incorporating the Upper Confidence Bound (UCB) approach, and discuss the challenges of using the sample average update method in dynamic environments, which we address with an Exponentially Weighted Moving Average (EWMA).
+Welcome to the GitHub repository for the Reinforcement Learning Fundamentals coursework. In the first part, we develop a Tic-Tac-Toe agent using the Temporal Difference (TD) learning algorithm. This agent is trained to compete against several types of opponents: a random player, a winning-move player (who plays randomly unless a winning move is immediately available), and the ThandPlayer (who plays to win or block the opponent's winning move). In the second part, we explore the concept of exploration vs. exploitation in reinforcement learning by implementing a 10-armed bandit problem. We compare the performance of greedy and epsilon-greedy strategies, incorporating the Upper Confidence Bound (UCB) approach, and discuss the challenges of using the sample average update method in dynamic environments, which we address with an Exponentially Weighted Moving Average (EWMA). Please refer to `CW-Q2-Kelvin.ipynb` for implementation of Q2.
 
 ## Part 1: Implementing the Tic-Tac-Toe Agent
 
@@ -32,8 +32,6 @@ After 10,000 episodes of training, we assessed each agent against the three play
 ### Conclusions
 - Agent1 and Agent2 are highly effective against RandomPlayer and WinningMovePlayer but struggle significantly against ThandPlayer compared to Agent3. This outcome is logical, given their training against simpler opponents.
 - Agent3, while slightly less dominant against RandomPlayer and WinningMovePlayer than Agent1 and Agent2, performs markedly better against ThandPlayer. Despite a more erratic learning curve and slower convergence, Agent 3 consistently demonstrates strong performance across different player types. This is likely because defeating ThandPlayer requires the ability to simultaneously consider multiple winning moves, which is a skill that offers a significant competitive edge against other agent.
-
-## Part 2: TBC
 
 # Reference
 - https://github.com/khpeek/Q-learning-Tic-Tac-Toe
