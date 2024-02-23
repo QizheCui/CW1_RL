@@ -6,6 +6,7 @@ Welcome to the GitHub repository for the Reinforcement Learning Fundamentals cou
 
 For a comprehensive walkthrough of our Tic-Tac-Toe game implementation, please consult the Jupyter Notebook titled `tic-tac-toe.ipynb`. This notebook meticulously outlines the Tic-Tac-Toe board setup, initializes various player types (including TDAgent with parameters $\alpha=0.2$, $\epsilon_{0} = 1$, $\epsilon_{min} = 0.1$, RandomPlayer, WinningMovePlayer, ThandPlayer, and HumanPlayer), and trains three distinct TD agents against each specified player type. We then evaluate the performance of each TD agent in 1000 game matches against the three player types. A demonstration of the learning curve is below:
 ![alt text](Q1.png)
+
 ### Observations and Insights
 To simplify our discussion, we refer to the agents as follows: Agent1 (trained against RandomPlayer), Agent2 (trained against WinningMovePlayer), and Agent3 (trained against ThandPlayer).
 - Agents 1 and 2 exhibit rapid learning, achieving approximately a 90% win rate in evaluations of 1000 games within 20,000 training episodes. Agent 2's learning curve displays more variability than Agent 1's, even post-convergence, which aligns with expectations.
