@@ -9,8 +9,8 @@ For a comprehensive walkthrough of our Tic-Tac-Toe game implementation, please c
 
 ### Observations and Insights
 To simplify our discussion, we refer to the agents as follows: Agent1 (trained against RandomPlayer), Agent2 (trained against WinningMovePlayer), and Agent3 (trained against ThandPlayer).
-- Agents 1 and 2 exhibit rapid learning, achieving approximately a 90% win rate in evaluations of 1000 games within 20,000 training episodes. Agent 2's learning curve displays more variability than Agent 1's, even post-convergence, which aligns with expectations.
-- Agent 3 shows a slower convergence rate, reaching a win rate of about 66% after 10,000 episodes, with notably fluctuating evaluation results.
+- Agent1 and Agent2 exhibit rapid learning, achieving approximately a 90% win rate in evaluations of 1000 games within 20,000 training episodes. Agent2's learning curve displays more variability than Agent 1's, even post-convergence, which aligns with expectations.
+- Agent3 shows a slower convergence rate, reaching a win rate of about 66% after 10,000 episodes, with notably fluctuating evaluation results.
 
 After 10,000 episodes of training, we assessed each agent against the three player types, yielding the following indicative results (note that these outcomes can vary based on random seeds and provide only a general performance indicator):
 
@@ -30,8 +30,8 @@ After 10,000 episodes of training, we assessed each agent against the three play
 - Wins against ThandPlayer: 626/1000, Draws: 14/1000, Losses: 360/1000
 
 ### Conclusions
-- Agents 1 and 2 are highly effective against RandomPlayer and WinningMovePlayer but struggle significantly against ThandPlayer compared to Agent 3. This outcome is logical, given their training against simpler opponents.
-- Agent 3, while slightly less dominant against RandomPlayer and WinningMovePlayer than Agents 1 and 2, performs markedly better against ThandPlayer. Despite a more erratic learning curve and slower convergence, Agent 3 consistently demonstrates strong performance across different player types. This is likely because defeating ThandPlayer requires the ability to simultaneously consider multiple winning moves, which is a skill that offers a significant competitive edge against other agent.
+- Agent1 and Agent2 are highly effective against RandomPlayer and WinningMovePlayer but struggle significantly against ThandPlayer compared to Agent3. This outcome is logical, given their training against simpler opponents.
+- Agent3, while slightly less dominant against RandomPlayer and WinningMovePlayer than Agent1 and Agent2, performs markedly better against ThandPlayer. Despite a more erratic learning curve and slower convergence, Agent 3 consistently demonstrates strong performance across different player types. This is likely because defeating ThandPlayer requires the ability to simultaneously consider multiple winning moves, which is a skill that offers a significant competitive edge against other agent.
 
 ## Part 2: TBC
 
